@@ -1,0 +1,4 @@
+17:26:08.095 [main] INFO  - chrome browser lauching
+17:26:08.102 [main] INFO  - Maximizing browser window
+17:26:08.239 [main] INFO  - Setting implicit wait
+17:26:08.252 [main] INFO  - Setting page load timeout

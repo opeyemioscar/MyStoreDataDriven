@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-07T17:26:04 WAT" name="Suite" finished-at="2024-03-07T17:26:24 WAT" duration-ms="19854">
+    <groups>
+      <group name="Regression">
+        <method signature="OrderPageTest.verifyProductPrice(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.mystore.testcases.OrderPageTest@2e3cdec2]" name="verifyProductPrice" class="com.mystore.testcases.OrderPageTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-03-07T17:26:04 WAT" name="Order Page Test" finished-at="2024-03-07T17:26:24 WAT" duration-ms="19854">
+      <class name="com.mystore.testcases.OrderPageTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.mystore.testcases.OrderPageTest@2e3cdec2]" started-at="2024-03-07T17:26:04 WAT" name="loadConfig" finished-at="2024-03-07T17:26:04 WAT" duration-ms="402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.OrderPageTest@2e3cdec2]" started-at="2024-03-07T17:26:04 WAT" name="setup" finished-at="2024-03-07T17:26:13 WAT" duration-ms="9243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyProductPrice(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.mystore.testcases.OrderPageTest@2e3cdec2]" started-at="2024-03-07T17:26:13 WAT" name="verifyProductPrice" data-provider="dp" finished-at="2024-03-07T17:26:23 WAT" duration-ms="10020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[t-shirt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductPrice -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.mystore.testcases.OrderPageTest@2e3cdec2]" started-at="2024-03-07T17:26:23 WAT" name="teardown" finished-at="2024-03-07T17:26:24 WAT" duration-ms="485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.mystore.testcases.OrderPageTest@2e3cdec2]" started-at="2024-03-07T17:26:25 WAT" name="afterSuite" finished-at="2024-03-07T17:26:25 WAT" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.mystore.testcases.OrderPageTest -->
+    </test> <!-- Order Page Test -->
+  </suite> <!-- Suite -->
+</testng-results>

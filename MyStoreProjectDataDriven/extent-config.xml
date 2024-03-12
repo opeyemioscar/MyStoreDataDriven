@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report theme: standard or dark -->
+        <theme>standard</theme>
+    
+        <!-- Document encoding (defaults to UTF-8) -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- Protocol for script and stylesheets (defaults to https) -->
+        <protocol>http</protocol>
+        
+        <!-- Title of the document -->
+        <documentTitle>MyStoreProject</documentTitle>
+        
+        <!-- Report name displayed at top-nav -->
+        <reportName>
+            MyStoreProject Report
+            <![CDATA[
+                <img src='C:\Users\hp\eclipse-workspace\MyStoreProjectDataDriven\Logo\logo.jpg'/>
+            ]]>
+        </reportName>
+        
+        <!-- Location of charts in the test view (top or bottom) -->
+        <testViewChartLocation>bottom</testViewChartLocation>
+      
+        <!-- Custom JavaScript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // Your custom JavaScript logic here
+                });
+            ]]>
+        </scripts>
+        
+        <!-- Custom styles -->
+        <styles>
+            <![CDATA[
+                .report-name { padding-left: 18px; }
+                .report-name > img {
+                    float: left;
+                    height: 90%;
+                    margin-left: 30px;
+                    margin-top: 3px;
+                    width: auto;
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
