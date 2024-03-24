@@ -24,7 +24,7 @@ public class BaseClass {
 	public static Properties prop;
 	public static Action Action;
 	public static Logger logger = LogManager.getLogger(BaseClass.class.getName());
-	public static ExcelReader excel = new ExcelReader("C:\\Users\\hp\\eclipse-workspace\\MyStoreProjectDataDriven\\src\\test\\resources\\TestData\\TestData.xlsx");
+	public static ExcelReader excel = new ExcelReader("C:\\Users\\hp\\git\\repository\\MyStoreProjectDataDriven\\src\\test\\resources\\TestData\\TestData.xlsx");
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 
 	public static WebDriver getWebDriver() {
