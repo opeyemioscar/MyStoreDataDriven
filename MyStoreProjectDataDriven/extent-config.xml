@@ -17,7 +17,7 @@
         <reportName>
             MyStoreProject Report
             <![CDATA[
-                <img src='C:\Users\hp\eclipse-workspace\MyStoreProjectDataDriven\Logo\logo.jpg'/>
+                <img src='http://localhost:8080/job/MyStoreProject/ws/MyStoreProjectDataDriven/Logo/logo.jpg'/>
             ]]>
         </reportName>
         
