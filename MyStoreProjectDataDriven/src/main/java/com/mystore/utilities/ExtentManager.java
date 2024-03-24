@@ -32,7 +32,7 @@ public class ExtentManager {
         extent.setSystemInfo("HostName", "MyHost");
         extent.setSystemInfo("ProjectName", "MyStoreProject");
         extent.setSystemInfo("Tester", "Opeyemi");
-        extent.setSystemInfo("OS", "Win10");
+        extent.setSystemInfo("OS", "Win11");
         extent.setSystemInfo("Browser", "Chrome");
     }
 
