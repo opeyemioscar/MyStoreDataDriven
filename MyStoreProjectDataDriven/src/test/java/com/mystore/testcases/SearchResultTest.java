@@ -32,6 +32,6 @@ public SearchResultPage SearchResultPage;
 		
 		SearchResultPage = indexPage.clickSearchBox("T-SHIRT");
 		boolean result =SearchResultPage.isProductAvailable();
-		Assert.assertFalse(result);
+		Assert.assertTrue(result);
 	}
 }
