@@ -31,6 +31,9 @@ public class LoginPage extends BaseClass{
 	@FindBy(xpath="//span[normalize-space()='Create an account']")
 	WebElement createNewAccountBtn;
 	
+	@FindBy(xpath = "//h1[@class='page-heading']")
+	public WebElement Authentification;
+	
 	public LoginPage() {
 		PageFactory.initElements(driver.get(), this);
 	}
@@ -51,11 +54,16 @@ public class LoginPage extends BaseClass{
 		return new AddressPage();
 	}
 	
-	public AccountCreationPage createNewAccount(String email) {
-		Action.type(emailforNewAccount, email);
-		Action.click(driver.get(), createNewAccountBtn);
+	
+	  public AccountCreationPage createNewAccount(String newEmail) {
+	  Action.type(emailforNewAccount, newEmail);
+	  Action.click(driver.get(),createNewAccountBtn);
+	  return new AccountCreationPage(); }
+	 
+	
+	public boolean verifyAuthentification() {
+		return Authentification.isDisplayed();
 		
-		return new AccountCreationPage();
 	}
 
 }

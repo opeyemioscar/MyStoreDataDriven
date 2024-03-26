@@ -43,29 +43,33 @@ public class AccountCreationPage extends BaseClass {
 	public WebElement formTitle;
 	
 	
+	
+	
+	
 	public AccountCreationPage() {
 		PageFactory.initElements(driver.get(), this);
 	}
 	
 	
-	public AccountCreationPage(String firstName, String lastName, String customereEmail, String day, String month, String year ) {
+	public void accountCreationPages(String firstName, String lastName, String day, String month, String year, String setPassword) {
 		Action.click(driver.get(), male);
 		Action.type(customerFirstName, firstName);
 		Action.type(customerLastName, lastName);
-		Action.type(customereemail, customereEmail);
+		Action.type(createPassword, setPassword);
 		Action.selectBySendkeys(day, days);
 		Action.selectBySendkeys(month, months);
 		Action.selectBySendkeys(year, years);
 		Action.click(driver.get(), newsletter);
-		Action.click(driver.get(), register);
+	}
+	public MyAccountPage validateRegistration() throws Throwable {
+		register.click();
+		return new MyAccountPage();
 	}
 	
 	
 	public boolean validateAccountCreatePage() {
 		return Action.isDisplayed(driver.get(), formTitle);
 	}
-	
-	
 	
 	
 }
