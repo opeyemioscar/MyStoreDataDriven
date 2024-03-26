@@ -7,11 +7,10 @@ import java.util.Map;
 import org.testng.annotations.DataProvider;
 
 import com.mystore.base.BaseClass;
-import com.mystore.utilities.ExcelReader;
 
 public class DataProviders extends BaseClass{
 	
-	public ExcelReader excel;
+	
 
 	@DataProvider(name="dp")
 	public Object[][] getData(Method m) {
@@ -40,27 +39,22 @@ public class DataProviders extends BaseClass{
 		
 	}
 	
-	@DataProvider(name = "newAcountDetailsData")
-	public Object[][] accountCreation() {
-		HashMap<String, String> hashMap = new HashMap<String, String>();
-		// Totals rows count
-		int rows = excel.getRowCount("AccountCreationData");
-		// Total Columns
-		int column = excel.getColumnCount("AccountCreationData");
-		int actRows = rows - 1;
-		//Created an object of array to store data
-		
-		for (int i = 0; i < actRows; i++) {
-			for (int j = 0; j < column; j++) {
-				hashMap.put(excel.getCellData("AccountCreationData", j, 1),
-						excel.getCellData("AccountCreationData", j, i + 2));
-			}
-			
-		}
-		return new Object[][] {
-			{hashMap}
-		};
-	}
-	
+	  public Object[][] accountCreation(Method m) {
+        String sheetName = m.getName(); // Using method name for sheet name
+        int rows = excel.getRowCount(sheetName);
+        int column = excel.getColumnCount(sheetName);
+        int actRows = rows - 1;
+        Object[][] data = new Object[actRows][1];
+        
+        for (int i = 0; i < actRows; i++) {
+            Map<String, String> hashMap = new HashMap<>();
+            for (int j = 0; j < column; j++) {
+                hashMap.put(excel.getCellData(sheetName, j, 1),
+                            excel.getCellData(sheetName, j, i + 2));
+            }
+            data[i][0]=hashMap;
+        }
+        return data;
+    }
 	
 }
