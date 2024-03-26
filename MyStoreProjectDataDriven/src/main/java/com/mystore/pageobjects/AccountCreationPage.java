@@ -55,7 +55,9 @@ public class AccountCreationPage extends BaseClass {
 		Action.click(driver.get(), male);
 		Action.type(customerFirstName, firstName);
 		Action.type(customerLastName, lastName);
+		Action.explicitWait(getWebDriver(), createPassword, 5);
 		Action.type(createPassword, setPassword);
+	
 		Action.selectBySendkeys(day, days);
 		Action.selectBySendkeys(month, months);
 		Action.selectBySendkeys(year, years);
