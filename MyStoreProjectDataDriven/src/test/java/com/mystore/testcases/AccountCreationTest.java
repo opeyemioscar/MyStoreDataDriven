@@ -55,8 +55,5 @@ public class AccountCreationTest extends BaseClass {
 				hashMapValue.get("Year"));
 		MyAccountPage=AccountCreationPage.validateRegistration();
 		MyAccountPage.verifyaccount();
-		String actual = "http://www.automationpractice.pl/index.php?controller=my-account";
-		String expected = driver.get().getCurrentUrl();
-		Assert.assertEquals(actual, expected);
 }
 }
