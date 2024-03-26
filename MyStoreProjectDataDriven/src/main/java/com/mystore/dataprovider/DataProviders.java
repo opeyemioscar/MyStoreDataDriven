@@ -38,7 +38,7 @@ public class DataProviders extends BaseClass{
 		
 		
 	}
-	
+	 @DataProvider(name = "newAcountDetailsData")
 	  public Object[][] accountCreation(Method m) {
         String sheetName = m.getName(); // Using method name for sheet name
         int rows = excel.getRowCount(sheetName);
