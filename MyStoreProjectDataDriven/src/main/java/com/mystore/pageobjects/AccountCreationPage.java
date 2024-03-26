@@ -62,7 +62,6 @@ public class AccountCreationPage extends BaseClass {
 		Action.click(driver.get(), newsletter);
 	}
 	public MyAccountPage validateRegistration() throws Throwable {
-	 Action.explicitWait(getWebDriver(), register, 5);
 		register.click();
 		return new MyAccountPage();
 	}
