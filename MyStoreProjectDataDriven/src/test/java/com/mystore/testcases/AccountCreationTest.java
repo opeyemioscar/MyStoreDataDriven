@@ -33,16 +33,17 @@ public class AccountCreationTest extends BaseClass {
 		driver.get().quit();
 	}
 
-	/*
-	 * @Test(groups = "Sanity") public void accountCreate() { LoginPage =
-	 * indexPage.clickSignBtn(); AccountCreationPage =
-	 * LoginPage.createNewAccount("testsaccount@gmail.com"); boolean result =
-	 * AccountCreationPage.validateAccountCreatePage(); Assert.assertTrue(result); }
-	 */
+	
+	  @Test(groups = "Sanity")
+	  public void accountCreate() { LoginPage = indexPage.clickSignBtn();
+	  AccountCreationPage = LoginPage.createNewAccount("testsaccount@gmail.com");
+	  boolean result = AccountCreationPage.validateAccountCreatePage(); 
+	  Assert.assertTrue(result); }
+	 
 
 	@Test(groups = "Regression",dataProvider = "newAcountDetailsData",dataProviderClass = DataProviders.class)
 	public void createAccountTest(HashMap<String,String> hashMapValue) throws Throwable {
-		indexPage= new IndexPageClass();
+		//indexPage= new IndexPageClass();
 		LoginPage=indexPage.clickSignBtn();
 		AccountCreationPage=LoginPage.createNewAccount(hashMapValue.get("Email"));
 		AccountCreationPage.accountCreationPages(
