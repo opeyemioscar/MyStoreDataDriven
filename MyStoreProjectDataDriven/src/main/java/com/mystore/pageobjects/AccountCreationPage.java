@@ -58,9 +58,9 @@ public class AccountCreationPage extends BaseClass {
 		Action.explicitWait(getWebDriver(), createPassword, 5);
 		Action.type(createPassword, setPassword);
 	
-		Action.selectBySendkeys(day, days);
-		Action.selectBySendkeys(month, months);
-		Action.selectBySendkeys(year, years);
+		Action.selectByValue(days, day);
+		Action.selectByValue(months, month);
+		Action.selectByValue(years, year);
 		Action.click(driver.get(), newsletter);
 	}
 	public MyAccountPage validateRegistration() throws Throwable {
