@@ -23,7 +23,7 @@ public class AccountCreationPage extends BaseClass {
 	@FindBy(xpath = "//input[@id='passwd']")
 	public WebElement createPassword;
 	
-	@FindBy(xpath = "days")
+	@FindBy(id = "days")
 	public WebElement days;
 	
 	@FindBy(id = "months")
