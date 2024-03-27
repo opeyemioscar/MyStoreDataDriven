@@ -51,12 +51,12 @@ public class AccountCreationPage extends BaseClass {
 	}
 	
 	
-	public void accountCreationPages(String firstName, String lastName, String day, String month, String year, String setPassword) {
+	public void accountCreationPages(String firstName, String lastName, String newPassword, String day, String month, String year) {
 		Action.click(driver.get(), male);
 		Action.type(customerFirstName, firstName);
 		Action.type(customerLastName, lastName);
-		Action.explicitWait(getWebDriver(), createPassword, 5);
-		Action.type(createPassword, setPassword);
+		//Action.explicitWait(getWebDriver(), createPassword, 5);
+		Action.type(createPassword, newPassword);
 	
 		Action.selectByValue(days, day);
 		Action.selectByValue(months, month);
